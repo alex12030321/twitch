@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("../../images/bg-default.jpg");
+  background-attachment: fixed;
+}
+
+.bgBlack {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bgBlack h1 {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.container .channel {
+  width: 300px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  float: left;
+  transition: box-shadow 1s, filter 1s;
+}
+.container .channel:hover {
+  box-shadow: 0px 0px 20px 10px #000;
+  filter: brightness(1.5);
+}
+.container img.game_preview {
+  width: 100%;
+}
+.container img.photo {
+  width: 50px;
+  border-radius: 100%;
+  margin: 10px;
+  float: left;
+}
+.container p {
+  color: #fff;
+  margin: 12px 0 0px 80px;
+  /* 讓多出來的字變成... */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.channel:nth-child(3n) {
+  margin-right: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+  .container .channel {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .container .channel {
+    width: 90%;
+  }
+
+  .bgBlack h1 {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

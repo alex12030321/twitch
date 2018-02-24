@@ -1,0 +1,92 @@
+$bg-color: rgba(0,0,0,0.5);
+$a: 10px;
+$b: 20px;
+$allMargin: 0;
+
+* {
+    margin: $allMargin;
+    padding: 0;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('../../images/bg-default.jpg');
+    background-attachment: fixed;
+}
+
+.bgBlack {
+    background-color: $bg-color;
+    h1 {
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    .channel {
+        width: 300px;
+        margin-left: 25px;
+        margin-bottom: 30px;
+        background-color: $bg-color;
+        float: left;
+        transition: box-shadow 1s, filter 1s;
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #000;
+            filter: brightness(1.5);
+            
+        }
+    }
+    img.game_preview {
+        width: 100%;
+    }
+    img.photo {
+        width: 50px;
+        border-radius: 100%;
+        margin: 10px;
+        float:left;
+    }
+    p {
+        color: #fff;
+        margin: 12px 0 0px 80px;
+        /* 讓多出來的字變成... */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+.channel:nth-child(3n) {
+    margin-right: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+        .channel {
+            width: 40%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        // &:nth-child(3) {
+        //     margin-right: 5%;
+        // }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container .channel {
+        width: 90%;
+    }
+    .bgBlack h1 {
+        font-size: 30px;
+    }
+}

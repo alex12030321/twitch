@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body {
+    background-image: url('../images/bg-default.jpg');
+    background-attachment: fixed;
+}
+
+.bgBlack {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.channel {
+    width: 300px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    background-color: rgba(0,0,0,0.5);
+    float: left;
+}
+
+.bgWhite {
+    width: inherit;
+    height: 242.75px;
+    position: absolute;
+}
+
+.bgWhite:hover {
+    background-color: #fff;
+    opacity: 0.2;
+    box-shadow: 0 0 40px 20px #000;
+    transition: 1s;
+    
+}
+
+/* .channel:hover {
+    box-shadow: 0px 0px 25px 10px #111;
+    background-color: rgba(255,255,255,0.3);
+    transition: 1s;
+} */
+
+.channel:nth-child(3n) {
+    margin-right: 25px;
+}
+
+.channel img.game_preview {
+    width: 100%;
+}
+
+.channel img.photo {
+    width: 50px;
+    border-radius: 100%;
+    margin: 10px;
+    float:left;
+}
+
+.channel p {
+    color: #fff;
+    margin: 12px 0 0px 80px;
+    /* 讓多出來的字變成... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
